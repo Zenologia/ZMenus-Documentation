@@ -537,8 +537,8 @@ Set `storage.cooldowns.type: MYSQL`, fill in the MySQL section, and run `/zmenus
 
 ## 🧑‍💻 Author
 
-**ZVaults** is developed and maintained by **Zenologia**.
+**ZMenus** is developed and maintained by **Zenologia**.
 
 - GitHub: [@Zenologia](https://github.com/Zenologia)
 
-If ZVaults saves you time on your server, a ⭐ on the repository is the best way to say thanks.
+If ZMenus saves you time on your server, a ⭐ on the repository is the best way to say thanks.
