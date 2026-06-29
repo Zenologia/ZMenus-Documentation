@@ -40,6 +40,7 @@ Designed for performance, flexibility, and admin control, every menu is created 
 - Paper 1.21.11+
 - Java 21+
 - PlaceholderAPI (required — ZMenus will not enable without it)
+- PacketEvents (required — ZMenus will not enable without it)
 - One cooldown storage backend:
   - YAML (default for new installs)
   - SQLite
@@ -55,7 +56,7 @@ Designed for performance, flexibility, and admin control, every menu is created 
 
 ## Installation
 
-1. Install **PlaceholderAPI** if it is not already present. ZMenus depends on it and will not start without it.
+1. Install **PlaceholderAPI** and **PacketEvents** if they are not already present. ZMenus depends on both and will not start without them.
 2. Drop `ZMenus.jar` into your server's `plugins/` folder.
 3. Start the server once so the plugin can generate its files:
    - `config.yml`
@@ -305,6 +306,7 @@ permissions:
 behavior:
   auto-reload-menus: true
   chat-input-timeout-seconds: 30
+  suppress-stonecutter-recipe-grid: true
 
 storage:
   cooldowns:
@@ -330,6 +332,7 @@ storage:
 - `global-fallback-item` is shown when a player lacks an item's permission and that item has no per-item fallback. Remove the section, or use a blank/invalid material, to disable it.
 - `editing.default-container-type` and `editing.default-rows` pre-select the highlighted option in the create selectors.
 - `behavior.chat-input-timeout-seconds` has a minimum of 5 seconds.
+- `behavior.suppress-stonecutter-recipe-grid` hides the recipe grid a stonecutter draws in the centre of its window for STONECUTTER menus, so the items you place are not joined by clickable-looking recipe outputs. It applies only to ZMenus stonecutter menus; real stonecutters are unaffected.
 - Changing `storage.cooldowns.type` and running `/zmenus reload` migrates existing cooldown data into the new backend automatically.
 
 ---
@@ -517,7 +520,7 @@ Set `storage.cooldowns.type: MYSQL`, fill in the MySQL section, and run `/zmenus
 
 ## Troubleshooting
 
-- **ZMenus does not enable:** PlaceholderAPI is required. Install it and restart.
+- **ZMenus does not enable:** PlaceholderAPI and PacketEvents are required. Install them and restart.
 - **Players can't open a menu they should see:** the menu's default permission is `zmenus.<menu-name>`, which only operators have by default. Grant it, or clear the menu permission in the editor.
 - **A placeholder shows as raw text:** make sure the providing PlaceholderAPI expansion is installed and the placeholder is correct.
 - **Menu edits aren't appearing:** ensure `behavior.auto-reload-menus` is `true`, or run `/zmenus reload` after manual file edits.
