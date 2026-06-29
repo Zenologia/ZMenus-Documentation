@@ -1,7 +1,7 @@
 # 🌟 ZMenus
 *Developed by Zenologia*
 
-Note: This is only public documenation. The code is private.
+**Note: This is only public documenation. The code is private.**
 
 A modern, in-game GUI menu builder for Paper servers — build clickable menus for shops, warps, kits, rules, info panels, and more without ever touching a YAML file by hand.  
 Designed for performance, flexibility, and admin control, every menu is created and edited live in-game, backed by per-item commands, permissions, fallback items, and cooldowns.
